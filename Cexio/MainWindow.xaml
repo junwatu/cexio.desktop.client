@@ -1,0 +1,52 @@
+﻿<Window x:Class="Cexio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cexio"
+        mc:Ignorable="d"
+        Title="Cex.io" 
+        Height="70.5" 
+        Width="330" 
+        Topmost="True"
+        Left="1025" 
+        Top="655" UseLayoutRounding="False" 
+        AllowsTransparency="True" WindowStyle="None" 
+        ResizeMode="NoResize" ShowInTaskbar="False" 
+        MouseRightButtonDown="Window_MouseRightButtonDown"
+        Cursor="Hand" MouseDown="Window_MouseDown">
+    <Window.Resources>
+        <ContextMenu x:Key="CexioDeskContextMenu">
+            <MenuItem Header="Exit" Click="MenuItem_Click"/>
+        </ContextMenu>
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/Images/background.png"/>
+    </Window.Background>
+    <Grid Margin="0,0,65,0" HorizontalAlignment="Right">
+        <Label x:Name="ExchangeLabel" 
+               VerticalAlignment="Center" 
+               Height="38" 
+               VerticalContentAlignment="Center" 
+               FontSize="23" 
+               FontWeight="Bold" 
+               Padding="5,3,7,5" 
+               Content="BTC/USD 00000.00"
+               Margin="2,30,-63,2" 
+               Width="256" Foreground="White" HorizontalAlignment="Left" Background="#FF1D1D1D">
+
+        </Label>
+        <Label x:Name="BTCBalance" Content="BTC 0.00000000" Padding="5"
+               HorizontalAlignment="Left" Width="117" Height="28" 
+               Foreground="White" FontSize="15" Background="#FF1674FD" 
+               VerticalAlignment="Top" Margin="2,2,0,0"/>
+        <Label x:Name="USDPure" Content="USD 000.000.000.0" 
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Width="139" Height="28" Foreground="White" 
+               Background="#FF41BD35" Margin="119,2,-63,0" Padding="5" FontSize="15"/>
+        <Image x:Name="Logo" HorizontalAlignment="Left" Height="70" Source="Resources/Images/37BitcoinOliveLeaves.png"
+               Margin="-70,0,0,0" VerticalAlignment="Top" Width="70" OpacityMask="#F7FFFBFB"/>
+
+    </Grid>
+</Window>
